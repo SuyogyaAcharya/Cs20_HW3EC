@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joe's hot dog</title>
+    <style>
+        body{
+            background-color: rgb(215, 105, 93);
+            text-align: center;
+            
+        }
+        h1 {
+            font-family: 'Arial Black', sans-serif; 
+            font-size: 36px; 
+            color: rgb(51,51,51);
+            letter-spacing: 2px;
+            margin: 20px 0;
+            text-align: center;
+            
+        }
+
+        h2 {
+            font-family: 'Arial Black', sans-serif;
+            font-size: 24px;
+            text-align: center;
+            color: rgb(51,51,51);
+
+        }
+
+        .items-container {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .food-item {
+            flex: 0 0 calc(33.33% - 10px); 
+            text-align: center;
+            margin: 0 5px;
+        }
+
+        .food-pic {
+            height: 200px; 
+            overflow: hidden;
+        }
+
+        .food-pic img {
+            width: 100%; 
+            height: 100%; 
+            object-fit: cover; 
+            border-radius: 10px;
+        }
+
+        button {
+            margin-top: 20px; 
+            background-color: rgb(76,175,80);
+            border: none;
+            color: rgb(255,255,255);
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: rgb(52, 135, 55);
+        }
+
+        #showOrder {
+            font-family: 'Arial Black', sans-serif;
+            text-align: center; 
+            padding: 20px; 
+            border: 2px solid rgb(0,0,0); 
+            border-radius: 10px; 
+            width: 50%; 
+            margin: 0 auto; 
+        }
+
+
+        #showOrder p {
+            margin: 10px 0; 
+        }
+        nav {
+            background-color: rgb(55, 25, 25);
+            color: white;
+            padding: 10px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar-logo {
+            width: 50px;
+            height: 50px;
+            margin: 0 20px;
+        }
+
+        .navbar-text {
+            font-size: 24px;
+        }
+
+        footer {
+            background-color: rgb(55, 25, 25);
+            color: white;
+            padding: 20px 0;
+        }
+
+        .footer-logo {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 10px;
+        }
+
+        .contact-info {
+            font-size: 16px;
+        }
+
+    </style>
+</head>
+<body>
+    <nav>
+        <div>
+            <img src="hotdogStand.jpg" alt="Left Logo" class="navbar-logo">
+        </div>
+        <div class="navbar-text">Special discount if you spend $25!!!!</div>
+        <div>
+            <img src="hotdogStand.jpg" alt="Right Logo" class="navbar-logo">
+        </div>
+    </nav>
+    <!-- Title-->
+    <h1> JOE'S HOTDOG STAND</h1>
+
+    
+    <!-- Creating show order and order button-->
+    <div id="showOrder" style="display: none;"></div>
+    <button onclick="getorder()">Order</button>
+    
+
+    <h2> Items:</h2>
+
+    <!-- Display the items-->
+    <div class="items-container">
+        <div class="food-item">
+            <div class="food-pic">
+                <img src="Hotdog.jpg" alt="Hot Dog">
+            </div>
+            <div class="food-text">
+                <p>HotDog</p>
+                <p>$4.65</p>
+            </div>
+        </div>
+        <div class="food-item">
+            <div class="food-pic">
+                <img src="fries.jpg" alt="Fries">
+            </div>
+            <div class="food-text">
+                <p>Fries</p>
+                <p>$3.75</p>
+            </div>
+        </div>
+        <div class="food-item">
+            <div class="food-pic">
+                <img src="drinks.jpg" alt="Drinks">
+            </div>
+            <div class="food-text">
+                <p>Drinks</p>
+                <p>$1.89</p>
+            </div>
+        </div>
+    </div>
+
+    
+    <footer>
+        <img src="hotdogStand.jpg" alt="Hot Dog Logo" class="footer-logo"><br>
+        <div class="contact-info">
+            <p>Contact Us:</p>
+            <p>Email: joesdogs@gmail.com</p>
+            <p>Phone: 442-552-6622</p>
+            <p>Address: 1600 Pennsylvania Avenue NW, Washington, DC 20500</p>
+        </div>
+    </footer>
+    <!-- Including the script-->
+    <script src="index.js"></script>
+    
+</body>
+</html>
